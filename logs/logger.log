@@ -1,0 +1,77 @@
+2025-04-16 18:13:40,167 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.2.Final
+2025-04-16 18:13:40,522 INFO o.s.b.StartupInfoLogger [restartedMain] Starting SpringBootECommerceApplication using Java 21.0.3 with PID 9316 (C:\Users\brian\Downloads\spring_boot_e_commerce\spring_boot_e_commerce\target\classes started by brian in C:\Users\brian\Downloads\spring_boot_e_commerce\spring_boot_e_commerce)
+2025-04-16 18:13:40,524 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-04-16 18:13:40,841 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-16 18:13:40,842 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-16 18:13:48,112 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-16 18:13:48,452 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 289 ms. Found 8 JPA repository interfaces.
+2025-04-16 18:13:52,134 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2025-04-16 18:13:52,224 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-16 18:13:52,227 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2025-04-16 18:13:52,228 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-16 18:13:52,900 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-04-16 18:13:52,901 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 12058 ms
+2025-04-16 18:13:55,287 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-16 18:13:57,042 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-16 18:13:58,123 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-04-16 18:14:03,347 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-16 18:14:04,622 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2025-04-16 18:14:06,851 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24aaf3c6
+2025-04-16 18:14:06,855 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2025-04-16 18:14:07,228 WARN o.h.d.Dialect [restartedMain] HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-04-16 18:14:07,280 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-16 18:14:07,390 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-16 18:14:11,530 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-16 18:14:11,612 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table cart_items (id integer not null auto_increment, quantity integer not null, product_id integer, user_id integer, primary key (id)) engine=InnoDB
+2025-04-16 18:14:11,956 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table categories (id integer not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB
+2025-04-16 18:14:12,584 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table messages (id integer not null auto_increment, email varchar(255), message TEXT, name varchar(255), phone integer not null, primary key (id)) engine=InnoDB
+2025-04-16 18:14:13,155 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table orders (id integer not null auto_increment, ordered_at datetime(6) not null, quantity integer not null, payment_id integer, product_id integer, user_id integer, primary key (id)) engine=InnoDB
+2025-04-16 18:14:13,576 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table payments (id integer not null auto_increment, amount float(53) not null, paid_at datetime(6) not null, user_id integer, primary key (id)) engine=InnoDB
+2025-04-16 18:14:14,279 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table products (id integer not null auto_increment, created_at datetime(6) not null, description TEXT, image_path TEXT, inventory integer not null, name varchar(255), price integer not null, stock integer not null, category_id integer, seller_id integer, primary key (id)) engine=InnoDB
+2025-04-16 18:14:15,068 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table users (id integer not null auto_increment, address varchar(255), email varchar(255), name varchar(255), number bigint, password varchar(255), role varchar(255), primary key (id)) engine=InnoDB
+2025-04-16 18:14:15,376 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table wishlists (id integer not null auto_increment, product_id integer not null, user_id integer, primary key (id)) engine=InnoDB
+2025-04-16 18:14:15,822 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table cart_items add constraint FK1re40cjegsfvw58xrkdp6bac6 foreign key (product_id) references products (id)
+2025-04-16 18:14:17,176 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table cart_items add constraint FK709eickf3kc0dujx3ub9i7btf foreign key (user_id) references users (id)
+2025-04-16 18:14:18,676 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table orders add constraint FK8aol9f99s97mtyhij0tvfj41f foreign key (payment_id) references payments (id)
+2025-04-16 18:14:20,142 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table orders add constraint FKkp5k52qtiygd8jkag4hayd0qg foreign key (product_id) references products (id)
+2025-04-16 18:14:22,064 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table orders add constraint FK32ql8ubntj5uh44ph9659tiih foreign key (user_id) references users (id)
+2025-04-16 18:14:25,232 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table payments add constraint FKj94hgy9v5fw1munb90tar2eje foreign key (user_id) references users (id)
+2025-04-16 18:14:27,333 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table products add constraint FKog2rp4qthbtt2lfyhfo32lsw9 foreign key (category_id) references categories (id)
+2025-04-16 18:14:32,143 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table products add constraint FKbgw3lyxhsml3kfqnfr45o0vbj foreign key (seller_id) references users (id)
+2025-04-16 18:14:34,010 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table wishlists add constraint FKl7ao98u2bm8nijc1rv4jobcrx foreign key (product_id) references products (id)
+2025-04-16 18:14:35,992 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table wishlists add constraint FK330pyw2el06fn5g28ypyljt16 foreign key (user_id) references users (id)
+2025-04-16 18:14:37,631 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-16 18:14:40,147 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-16 18:14:42,712 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-16 18:14:42,757 WARN o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [restartedMain] Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-16 18:14:43,251 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
+2025-04-16 18:14:43,881 WARN o.s.s.c.a.w.AbstractRequestMatcherRegistry [restartedMain] One of the patterns in [/register, /login, /contact, /error, assets/**, /, /about, /products/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-04-16 18:14:45,144 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2025-04-16 18:14:45,232 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2025-04-16 18:14:45,298 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2025-04-16 18:14:45,310 INFO o.s.b.StartupInfoLogger [restartedMain] Started SpringBootECommerceApplication in 69.355 seconds (process running for 86.32)
+2025-04-16 18:15:18,580 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-16 18:15:18,580 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-04-16 18:15:18,581 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2025-04-16 18:15:19,653 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select p1_0.id,p1_0.category_id,p1_0.created_at,p1_0.description,p1_0.image_path,p1_0.inventory,p1_0.name,p1_0.price,p1_0.seller_id,p1_0.stock from products p1_0 order by p1_0.created_at desc limit ?
+2025-04-16 18:15:22,312 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select p1_0.id,p1_0.category_id,p1_0.created_at,p1_0.description,p1_0.image_path,p1_0.inventory,p1_0.name,p1_0.price,p1_0.seller_id,p1_0.stock from products p1_0 order by p1_0.created_at desc limit ?
+2025-04-16 18:15:34,410 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-4] select p1_0.id,p1_0.category_id,p1_0.created_at,p1_0.description,p1_0.image_path,p1_0.inventory,p1_0.name,p1_0.price,p1_0.seller_id,p1_0.stock from products p1_0
+2025-04-16 18:15:35,066 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select p1_0.id,p1_0.category_id,p1_0.created_at,p1_0.description,p1_0.image_path,p1_0.inventory,p1_0.name,p1_0.price,p1_0.seller_id,p1_0.stock from products p1_0
+2025-04-16 18:16:27,654 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select u1_0.id from users u1_0 where u1_0.email=? limit ?
+2025-04-16 18:16:27,948 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] insert into users (address,email,name,number,password,role) values (?,?,?,?,?,?)
+2025-04-16 18:16:37,242 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-4] select u1_0.id,u1_0.address,u1_0.email,u1_0.name,u1_0.number,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+2025-04-16 18:16:37,476 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-6] select p1_0.id,p1_0.category_id,p1_0.created_at,p1_0.description,p1_0.image_path,p1_0.inventory,p1_0.name,p1_0.price,p1_0.seller_id,p1_0.stock from products p1_0 order by p1_0.created_at desc limit ?
+2025-04-16 18:16:38,237 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-5] select p1_0.id,p1_0.category_id,p1_0.created_at,p1_0.description,p1_0.image_path,p1_0.inventory,p1_0.name,p1_0.price,p1_0.seller_id,p1_0.stock from products p1_0 order by p1_0.created_at desc limit ?
+2025-04-16 18:16:44,320 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select u1_0.id,u1_0.address,u1_0.email,u1_0.name,u1_0.number,u1_0.password,u1_0.role from users u1_0 where u1_0.id=?
+2025-04-16 18:19:25,422 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-16 18:19:25,434 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-04-16 18:19:25,448 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-16 18:19:25,458 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-04-16 18:19:25,514 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
